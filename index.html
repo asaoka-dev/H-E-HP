@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社H＆Eテクノロジー | 信頼と革新のコンサルティング</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Montserrat:wght@300;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --sky-blue: #00B2EE;
+            /* スカイブルー */
+            --royal-navy: #002147;
+            /* 重厚なネイビー */
+            --gold-accent: #C5A059;
+            /* ロイヤル感を出すゴールド */
+            --text-white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Noto Serif JP', serif;
+            background-color: #f9f9f9;
+            color: var(--royal-navy);
+            line-height: 1.8;
+        }
+
+        /* 重厚感のあるヒーローセクション */
+        .hero {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--royal-navy) 0%, var(--sky-blue) 100%);
+        }
+
+        /* 文字背景のエフェクト：透過するオーバーレイ */
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, transparent 20%, rgba(0, 0, 0, 0.3) 80%);
+            animation: drift 20s infinite linear;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 40px;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            /* ゴールドの細い枠線 */
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        /* ロイヤル感を出す文字エフェクト */
+        .hero-h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            color: var(--text-white);
+            letter-spacing: 0.15em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(to bottom, #fff 40%, var(--sky-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-sub {
+            font-size: 1.2rem;
+            color: var(--gold-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5em;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* セクションタイトル */
+        .section-title {
+            text-align: center;
+            margin: 80px 0 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: var(--sky-blue);
+        }
+
+        /* サービスカードのデザイン */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid var(--sky-blue);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-left-color: var(--gold-accent);
+        }
+
+        .card h3 {
+            color: var(--royal-navy);
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        /* スカイブルーのアクセント */
+        .highlight {
+            color: var(--sky-blue);
+            font-weight: bold;
+        }
+
+        @keyframes drift {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-sub">Innovation for Parent and Child</span>
+            <h1 class="hero-h1">親と子の問題を解決する<br>事業革新を。</h1>
+            <p style="color: white; font-weight: 300; margin-top: 20px;">H&E Technology Inc.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="section-title">
+            <h2>Our Services</h2>
+            <p>現場を知るプロフェッショナルによる、確かな支援</p>
+        </section>
+
+        <div class="grid">
+            <div class="card">
+                <h3>ITコンサルティング</h3>
+                <p>DXを実現したい企業・団体様に、<span
+                        class="highlight">「必要な時に、必要なだけの」</span>経験豊富な人材リソースをご提供します。介護向け音声AIや適性検査の導入も強力に支援。</p>
+            </div>
+            <div class="card">
+                <h3>経営・業務コンサルティング</h3>
+                <p>病院や学校経営に特化した専門スキル。組織人事から<span class="highlight">M＆A、ビジネスマッチング</span>まで、経営の根幹から変革を促します。</p>
+            </div>
+            <div class="card">
+                <h3>IoT / AI ソリューション</h3>
+                <p>保育・介護現場の負荷を低減。見守りカメラや、保育の質を評価する<span class="highlight">最新のAIシステム</span>開発・導入を推進します。</p>
+            </div>
+        </div>
+    </div>
+
+    <footer
+        style="background: var(--royal-navy); color: white; padding: 60px 0; margin-top: 100px; text-align: center;">
+        <div class="container">
+            <p style="letter-spacing: 2px;">株式会社H＆Eテクノロジー</p>
+            <p style="font-size: 0.8rem; opacity: 0.6;">© 2026 H&E Technology Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
